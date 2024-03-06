@@ -1,0 +1,31 @@
+### Создать новый фильм
+POST http://localhost:8080/films
+Content-Type: application/json
+
+{
+  "name": "Inception",
+  "filmYear": 2010,
+  "director": "Christopher Nolan",
+  "description": "description"
+}
+
+
+### Получить фильм по ID
+GET http://localhost:8080/films/225f3427-b68b-420d-a1c2-20b0828b04e7
+
+### Обновить фильм
+PUT http://localhost:8080/films/225f3427-b68b-420d-a1c2-20b0828b04e7
+Content-Type: application/json
+
+{
+  "name": "Inception Updated",
+  "filmYear": 2010,
+  "director": "Christopher Nolan",
+  "description": "REUpdated description"
+}
+
+### Удалить фильм
+DELETE http://localhost:8080/films/983c5dae-4aaf-4c08-a09e-773b7a52f9c7
+
+### Получить все фильмы
+GET http://localhost:8080/films

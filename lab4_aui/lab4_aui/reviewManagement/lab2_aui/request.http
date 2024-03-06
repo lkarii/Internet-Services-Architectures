@@ -1,0 +1,32 @@
+### Создать новую рецензию
+POST http://localhost:8080/reviews
+Content-Type: application/json
+
+{
+  "reviewerName": "Darek",
+  "reviewDate": "2015-06-12",
+  "reviewText": "good",
+  "rating": 4,
+  "filmId": "983c5dae-4aaf-4c08-a09e-773b7a52f9c7"
+}
+
+### Получить рецензию по ID
+GET http://localhost:8080/reviews/5d24070c-5bcc-4a65-8a4b-aad5647b909d
+
+### Обновить рецензию
+PUT http://localhost:8080/reviews/5d24070c-5bcc-4a65-8a4b-aad5647b909d
+Content-Type: application/json
+
+{
+  "reviewerName": "Jane Doe",
+  "reviewDate": "2010-08-20",
+  "reviewText": "An updated review text.",
+  "rating": 5,
+  "filmId": "f8bad47d-baef-41cb-80c9-fea8bf4a3d63"
+}
+
+### Удалить рецензию
+DELETE http://localhost:8080/reviews/5d24070c-5bcc-4a65-8a4b-aad5647b909d
+
+### Получить все рецензии
+GET http://localhost:8080/reviews

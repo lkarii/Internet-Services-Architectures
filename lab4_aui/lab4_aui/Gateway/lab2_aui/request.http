@@ -1,0 +1,72 @@
+### Создать новый фильм
+POST http://localhost:8080/films
+Content-Type: application/json
+
+//{
+//  "name": "Inception",
+//  "filmYear": 2010,
+//  "director": "Christopher Nolan",
+//  "description": "A thief enters the dreams of others to steal their secrets."
+//}
+
+{
+  "name": "The hunger games",
+  "filmYear": 2012,
+  "director": "Gary Ross",
+  "description": "The Hunger Games film series is composed of science fiction dystopian adventure films, based on The Hunger Games trilogy of novels by American author Suzanne Collins."
+}
+
+
+### Получить фильм по ID
+GET http://localhost:8080/films/6b05463e-cc6e-4b7d-86ae-f72b59d60add
+
+
+### Обновить фильм
+PUT http://localhost:8080/films/6b05463e-cc6e-4b7d-86ae-f72b59d60add
+Content-Type: application/json
+
+{
+  "name": "Inception Updated",
+  "filmYear": 2010,
+  "director": "Christopher Nolan",
+  "description": "Updated description"
+}
+
+### Удалить фильм
+DELETE http://localhost:8080/films/06b12a12-ad3f-4baa-99ca-8767956f9b1c
+
+### Получить все фильмы
+GET http://localhost:8080/films
+
+### Создать новую рецензию
+POST http://localhost:8080/reviews
+Content-Type: application/json
+
+{
+  "reviewerName": "John Doe",
+  "reviewDate": "2010-07-20",
+  "reviewText": "An insightful review.",
+  "rating": 4,
+  "filmId": "06b12a12-ad3f-4baa-99ca-8767956f9b1c"
+}
+
+### Получить рецензию по ID
+GET http://localhost:8080/reviews/60f8a44e-d103-49f3-8435-26aaf1a3ae10
+
+### Обновить рецензию
+PUT http://localhost:8080/reviews/60f8a44e-d103-49f3-8435-26aaf1a3ae10
+Content-Type: application/json
+
+{
+  "reviewerName": "Jane Doe",
+  "reviewDate": "2010-08-20",
+  "reviewText": "An updated review text.",
+  "rating": 5,
+  "filmId": "3241dd04-10a6-4c4b-8baa-61bf930f8cd9"
+}
+
+### Удалить рецензию
+DELETE http://localhost:8080/reviews/60f8a44e-d103-49f3-8435-26aaf1a3ae10
+
+### Получить все рецензии
+GET http://localhost:8080/reviews
