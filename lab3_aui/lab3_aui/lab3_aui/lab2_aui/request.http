@@ -1,0 +1,85 @@
+### Создать новый фильм
+POST http://localhost:8080/films
+Content-Type: application/json
+
+//{
+//  "name": "jjjjjj",
+//  "filmYear": 2010,
+//  "director": "Christopher Nolan",
+//  "description": "A thief enters the dreams of others to steal their secrets."
+//}
+
+{
+  "name": "The hunger games",
+  "filmYear": 2012,
+  "director": "Gary Ross",
+  "description": "The Hunger Games film series is composed of science fiction dystopian adventure films, based on The Hunger Games trilogy of novels by American author Suzanne Collins."
+}
+
+
+### Получить фильм по ID
+GET http://localhost:8080/films/6283674b-cc73-400c-a6b2-3da9c61d2f27
+
+
+### Обновить фильм
+PUT http://localhost:8080/films/3cdf4ca8-1e5e-442d-961c-9f45cabcb307
+Content-Type: application/json
+
+{
+  "name": "Inception Updated",
+  "filmYear": 2010,
+  "director": "Christopher Nolan",
+  "description": "Updated description"
+}
+
+### Удалить фильм
+DELETE http://localhost:8080/films/3cdf4ca8-1e5e-442d-961c-9f45cabcb307
+
+### Получить все фильмы
+GET http://localhost:8080/films
+
+### Создать новую рецензию
+POST http://localhost:8080/reviews
+Content-Type: application/json
+
+//{
+//  "reviewerName": "John Doe",
+//  "reviewDate": "2010-07-20",
+//  "reviewText": "sdfghjkl;.",
+//  "rating": 5,
+//  "filmId": "3cdf4ca8-1e5e-442d-961c-9f45cabcb307"
+//}
+//{
+//"reviewerName": "Max",
+//"reviewDate": "2021-08-23",
+//"reviewText": "Amazing! this one is my favourite film.",
+//"rating": 5,
+//"filmId": "3cdf4ca8-1e5e-442d-961c-9f45cabcb307"
+//}
+{"reviewerName": "Karina",
+"reviewDate": "2023-03-17",
+"reviewText": "ok.",
+"rating": 3,
+"filmId": "3cdf4ca8-1e5e-442d-961c-9f45cabcb307"
+}
+
+### Получить рецензию по ID
+GET http://localhost:8080/reviews/60f8a44e-d103-49f3-8435-26aaf1a3ae10
+
+### Обновить рецензию
+PUT http://localhost:8080/reviews/60f8a44e-d103-49f3-8435-26aaf1a3ae10
+Content-Type: application/json
+
+{
+  "reviewerName": "Jane Doe",
+  "reviewDate": "2010-08-20",
+  "reviewText": "An updated review text.",
+  "rating": 5,
+  "filmId": "6283674b-cc73-400c-a6b2-3da9c61d2f27"
+}
+
+### Удалить рецензию
+DELETE http://localhost:8080/reviews/6283674b-cc73-400c-a6b2-3da9c61d2f27
+
+### Получить все рецензии
+GET http://localhost:8080/reviews
